@@ -9,7 +9,7 @@ class Television:
         self.__volume = self.min_volume
         self.__channel = self.min_channel
         self.__old_volume = self.__volume
-        #FIXME get mute or volume methods to save old value of volume
+        #TODO get mute or volume methods to save old value of volume
     def power(self):
         if self.__status == False:
             self.__status = True

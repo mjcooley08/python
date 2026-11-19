@@ -20,8 +20,8 @@ class Test:
         assert self.tv_one.__str__() == 'Power = True, Channel = 0, Volume = 0'
         self.tv_one.mute()
         assert self.tv_one.__str__() == 'Power = True, Channel = 0, Volume = 1'
-        self.tv_one.power()
         self.tv_one.mute()
+        self.tv_one.power()
         assert self.tv_one.__str__() == 'Power = False, Channel = 0, Volume = 0'
         self.tv_one.power()
         self.tv_one.mute()

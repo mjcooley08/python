@@ -3,7 +3,7 @@ class Television:
     max_volume = 2
     min_channel = 0
     max_channel = 3
-    def __init__(self):
+    def __init__(self) -> None:
         '''
         This method creates a television object. It declares the default values for this object.
         '''
@@ -13,7 +13,7 @@ class Television:
         self.__channel = self.min_channel
         self.__old_volume = self.__volume
         #TODO get mute or volume methods to save old value of volume
-    def power(self):
+    def power(self) -> None:
         '''
         This method changes the status of a television object.
         '''
@@ -21,7 +21,7 @@ class Television:
             self.__status = True
         else:
             self.__status = False
-    def mute(self): #see if you can make O notation better if u have to check status.
+    def mute(self) -> None: #see if you can make O notation better if u have to check status.
         '''
         This method changes the mute status of a television object.
         It either changes the volume to the minimum volume or back to the volume it was before it was muted.
@@ -34,7 +34,7 @@ class Television:
                 self.__old_volume = self.__volume
                 self.__volume = self.min_volume
                 self.__muted = True
-    def channel_up(self):
+    def channel_up(self) -> None:
         '''
         This method increases the channel of the television object by one.
         If the channel is already at its maximum, it sets it back to the minimum channel.
@@ -44,7 +44,7 @@ class Television:
                 self.__channel = self.__channel + 1
             else:
                 self.__channel = self.min_channel
-    def channel_down(self):
+    def channel_down(self) -> None:
         '''
         This method decreases the channel of the television object by one.
         If the channel is already at its minimum, it sets it back to the maximum channel.
@@ -54,7 +54,7 @@ class Television:
                 self.__channel = self.__channel - 1
             else:
                 self.__channel = self.max_channel
-    def volume_up(self):
+    def volume_up(self) -> None:
         '''
         This method increases the volume of the television object by one.
         If the volume is already at its maximum, it keeps it at the maximum volume.
@@ -66,7 +66,7 @@ class Television:
                 self.__muted = False
             if self.__volume < self.max_volume :
                 self.__volume = self.__volume + 1
-    def volume_down(self):
+    def volume_down(self) -> None:
         '''
         This method decreases the volume of the television object by one.
         If the volume is already at its minimum, it keeps it at the minimum volume.
@@ -78,7 +78,7 @@ class Television:
                 self.__muted = False
             if self.__volume > self.min_volume:
                 self.__volume = self.__volume - 1
-    def __str__(self):
+    def __str__(self) -> str:
         '''
         This method returns a string describing the television object.
         :return: Television's power, channel, and volume

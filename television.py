@@ -12,7 +12,7 @@ class Television:
         self.__volume = self.min_volume
         self.__channel = self.min_channel
         self.__old_volume = self.__volume
-        #TODO get mute or volume methods to save old value of volume
+        #I couldn't find a way to save the old volume without defining another variable in the init method.
     def power(self) -> None:
         '''
         This method changes the status of a television object.
@@ -21,7 +21,7 @@ class Television:
             self.__status = True
         else:
             self.__status = False
-    def mute(self) -> None: #see if you can make O notation better if u have to check status.
+    def mute(self) -> None:
         '''
         This method changes the mute status of a television object.
         It either changes the volume to the minimum volume or back to the volume it was before it was muted.

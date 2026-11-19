@@ -40,7 +40,7 @@ class Television:
         If the channel is already at its maximum, it sets it back to the minimum channel.
         '''
         if self.__status == True:
-            if self.__channel != self.max_channel:
+            if self.__channel < self.max_channel:
                 self.__channel = self.__channel + 1
             else:
                 self.__channel = self.min_channel
